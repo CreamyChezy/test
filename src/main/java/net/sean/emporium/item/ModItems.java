@@ -3,6 +3,7 @@ package net.sean.emporium.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -14,13 +15,14 @@ public class ModItems {
 
     public static final Item WORM = registerItem("worm", new Item(new FabricItemSettings().food(ModFoodComponents.WORM)));
     public static final Item WORM_STICK = registerItem("worm_stick", new Item(new FabricItemSettings().maxCount(1)));
-    public static final Item SLOP_BUCKET = new CustomBucket(new FabricItemSettings(), 2145);
+    public static final Item SLOP_BUCKET = new BucketItem(AnimalEmporium.STILL_SLOP, new FabricItemSettings());
 
     private static void addItemsToFoodTab(FabricItemGroupEntries entries){
         entries.add(WORM);
     }
     private static void addItemsToToolsTab(FabricItemGroupEntries entries){
         entries.add(WORM_STICK);
+        entries.add(SLOP_BUCKET);
     }
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(AnimalEmporium.MOD_ID, name), item);

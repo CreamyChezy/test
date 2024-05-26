@@ -20,11 +20,10 @@ public class AnimalEmporiumClient implements ClientModInitializer {
         FluidRenderHandlerRegistry.INSTANCE.register(AnimalEmporium.STILL_SLOP, AnimalEmporium.FLOWING_SLOP, new SimpleFluidRenderHandler(
                 new Identifier("minecraft:block/water_still"),
                 new Identifier("minecraft:block/water_flow"),
-                0x4DC248
+                0x612B20
         ));
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), AnimalEmporium.STILL_SLOP, AnimalEmporium.FLOWING_SLOP);
 
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> ((CustomBucket) stack.getItem()).getColor(tintIndex),
-                ModItems.SLOP_BUCKET);
+
     }
 }

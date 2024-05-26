@@ -23,6 +23,6 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.WORM, Models.GENERATED);
         itemModelGenerator.register(ModItems.WORM_STICK, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SLOP_BUCKET, item("template_bucket"));
+        itemModelGenerator.register(ModItems.SLOP_BUCKET, Models.GENERATED);
     }
 }
