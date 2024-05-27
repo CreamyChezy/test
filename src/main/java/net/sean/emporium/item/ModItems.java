@@ -10,12 +10,13 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.sean.emporium.AnimalEmporium;
+import net.sean.emporium.fluid.ModFluids;
 
 public class ModItems {
 
     public static final Item WORM = registerItem("worm", new Item(new FabricItemSettings().food(ModFoodComponents.WORM)));
     public static final Item WORM_STICK = registerItem("worm_stick", new Item(new FabricItemSettings().maxCount(1)));
-    public static final Item SLOP_BUCKET = new BucketItem(AnimalEmporium.STILL_SLOP, new FabricItemSettings());
+    public static final Item SLOP_BUCKET = registerItem("slop_bucket", new Item(new FabricItemSettings().maxCount(1)));
 
     private static void addItemsToFoodTab(FabricItemGroupEntries entries){
         entries.add(WORM);
@@ -32,13 +33,6 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToFoodTab);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsTab);
+
     }
 }
-
-/*
-
-    TO DO:
-    get worm on a stick png
-    add entity classes
-
- */

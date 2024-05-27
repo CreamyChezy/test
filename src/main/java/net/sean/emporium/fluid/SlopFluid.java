@@ -12,12 +12,12 @@ import net.sean.emporium.item.ModItems;
 public abstract class SlopFluid extends FluidTemplate {
     @Override
     public Fluid getStill() {
-        return AnimalEmporium.STILL_SLOP;
+        return ModFluids.STILL_SLOP;
     }
 
     @Override
     public Fluid getFlowing() {
-        return AnimalEmporium.FLOWING_SLOP;
+        return ModFluids.FLOWING_SLOP;
     }
 
     @Override
@@ -27,7 +27,7 @@ public abstract class SlopFluid extends FluidTemplate {
 
     @Override
     protected BlockState toBlockState(FluidState fluidState) {
-        return AnimalEmporium.SLOP.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(fluidState));
+        return ModFluids.SLOP.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(fluidState));
     }
 
     public static class Flowing extends SlopFluid {

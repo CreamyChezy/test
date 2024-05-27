@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 
+import net.sean.emporium.fluid.ModFluids;
 import net.sean.emporium.item.ModItems;
 
 @Environment(EnvType.CLIENT)
@@ -17,12 +18,12 @@ public class AnimalEmporiumClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        FluidRenderHandlerRegistry.INSTANCE.register(AnimalEmporium.STILL_SLOP, AnimalEmporium.FLOWING_SLOP, new SimpleFluidRenderHandler(
+        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_SLOP, ModFluids.FLOWING_SLOP, new SimpleFluidRenderHandler(
                 new Identifier("minecraft:block/water_still"),
                 new Identifier("minecraft:block/water_flow"),
                 0x612B20
         ));
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), AnimalEmporium.STILL_SLOP, AnimalEmporium.FLOWING_SLOP);
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_SLOP, ModFluids.FLOWING_SLOP);
 
 
     }
