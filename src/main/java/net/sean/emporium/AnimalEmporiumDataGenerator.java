@@ -17,7 +17,6 @@ public class AnimalEmporiumDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
-
 	}
 	public static Model item(String parent) {
 		return new Model(Optional.of(new Identifier(AnimalEmporium.MOD_ID, "item/" + parent)), Optional.empty());

@@ -16,7 +16,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.sean.emporium.fluid.SlopFluid;
-import net.sean.emporium.item.CustomBucket;
 import net.sean.emporium.item.ModFoodComponents;
 import net.sean.emporium.item.ModItems;
 import net.sean.emporium.potion.ModPotions;

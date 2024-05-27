@@ -9,7 +9,7 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
-import net.sean.emporium.item.CustomBucket;
+
 import net.sean.emporium.item.ModItems;
 
 @Environment(EnvType.CLIENT)
