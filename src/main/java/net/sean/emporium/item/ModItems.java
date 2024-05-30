@@ -34,5 +34,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToFoodTab);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsTab);
 
+        AnimalEmporium.LOGGER.info("Registered Mod Items for " + AnimalEmporium.MOD_ID);
+
     }
 }

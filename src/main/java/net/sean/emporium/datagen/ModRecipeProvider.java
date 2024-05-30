@@ -22,7 +22,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SLOP_BUCKET, 1)
+       ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SLOP_BUCKET, 1)
                 .input(Items.WATER_BUCKET)
                 .input(Items.MUD)
                 .criterion(hasItem(Items.WATER_BUCKET),conditionsFromItem(Items.WATER_BUCKET))

@@ -6,7 +6,6 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -55,12 +54,13 @@ public class OpossumEntity extends TameableEntity {
         return stack.isOf(ModItems.WORM);
     }
 
-    @Override
-        public EntityView method_48926() {
-            return null;
-        }
 
-        @Nullable
+    @Override
+    public EntityView method_48926() {
+        return null;
+    }
+
+    @Nullable
         @Override
         public LivingEntity getOwner() {
             return super.getOwner();
