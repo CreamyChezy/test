@@ -19,8 +19,8 @@ public class AnimalEmporium implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModFluids.registerModFluids();
 		ModItems.registerModItems();
+		ModFluids.registerModFluids();
 		ModLootTableModifiers.modifyLootTables();
 		ModPotions.registerPotions();
 		ModPotions.registerPotionsRecipes();
