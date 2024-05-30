@@ -1,6 +1,9 @@
 package net.sean.emporium;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.sean.emporium.entity.ModEntities;
+import net.sean.emporium.entity.custom.OpossumEntity;
 import net.sean.emporium.fluid.ModFluids;
 import net.sean.emporium.item.ModItems;
 import net.sean.emporium.potion.ModPotions;
@@ -16,10 +19,11 @@ public class AnimalEmporium implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModFluids.registerModFluids();
 		ModItems.registerModItems();
+		ModFluids.registerModFluids();
 		ModLootTableModifiers.modifyLootTables();
 		ModPotions.registerPotions();
 		ModPotions.registerPotionsRecipes();
+		FabricDefaultAttributeRegistry.register(ModEntities.OPOSSUM, OpossumEntity.createOpossumAttributes());
 	}
 }

@@ -16,7 +16,7 @@ public class ModItems {
 
     public static final Item WORM = registerItem("worm", new Item(new FabricItemSettings().food(ModFoodComponents.WORM)));
     public static final Item WORM_STICK = registerItem("worm_stick", new Item(new FabricItemSettings().maxCount(1)));
-    public static final Item SLOP_BUCKET = registerItem("slop_bucket", new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item SLOP_BUCKET = new BucketItem(ModFluids.STILL_SLOP, new FabricItemSettings());
 
     private static void addItemsToFoodTab(FabricItemGroupEntries entries){
         entries.add(WORM);
