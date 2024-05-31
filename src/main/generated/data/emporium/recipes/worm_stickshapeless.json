@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:fishing_rod"
+    },
+    {
+      "item": "emporium:worm"
+    }
+  ],
+  "result": {
+    "item": "emporium:worm_stick"
+  }
+}
