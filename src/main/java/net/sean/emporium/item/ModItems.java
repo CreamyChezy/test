@@ -16,7 +16,7 @@ public class ModItems {
 
     public static final Item WORM = registerItem("worm", new Item(new FabricItemSettings().food(ModFoodComponents.WORM)));
     public static final Item WORM_STICK = registerItem("worm_stick", new Item(new FabricItemSettings().maxCount(1)));
-    public static final Item SLOP_BUCKET = new BucketItem(ModFluids.STILL_SLOP, new FabricItemSettings());
+    public static final Item SLOP_BUCKET = registerBucketItem("slop_bucket", new BucketItem(ModFluids.STILL_SLOP, new FabricItemSettings()));
 
     private static void addItemsToFoodTab(FabricItemGroupEntries entries){
         entries.add(WORM);
@@ -28,13 +28,15 @@ public class ModItems {
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(AnimalEmporium.MOD_ID, name), item);
     }
+    private static BucketItem registerBucketItem(String name, BucketItem item){
+        return Registry.register(Registries.ITEM, new Identifier(AnimalEmporium.MOD_ID, name), item);
+    }
     public static void registerModItems() {
         AnimalEmporium.LOGGER.info("Registering Mod Items for " + AnimalEmporium.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToFoodTab);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsTab);
 
-        AnimalEmporium.LOGGER.info("Registered Mod Items for " + AnimalEmporium.MOD_ID);
 
     }
 }

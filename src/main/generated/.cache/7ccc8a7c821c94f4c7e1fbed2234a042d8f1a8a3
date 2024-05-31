@@ -1,5 +1,5 @@
-// 1.20.1	2024-05-30T17:24:46.9309507	Animal Emporium/Recipes
-2dcedaed24d36135144c73c810b3f978a7136131 data\emporium\advancements\recipes\misc\airshapeless.json
-a40f7b6544115841ce205ef31fcf62fadcebf0ab data\emporium\recipes\airshapeless.json
+// 1.20.2	2024-05-30T20:22:28.9539517	Animal Emporium/Recipes
 87dc5cb72c3e26e62a17d3eb251eda90fa382906 data\emporium\recipes\worm_stickshapeless.json
-0e4752f7e9c1fc1cc34037acc0d9ecb55ba5f80a data\emporium\advancements\recipes\tools\worm_stickshapeless.json
+6bb0eb1b717d99f042971d17cfc8db52ec0d411a data\emporium\advancements\recipes\tools\worm_stickshapeless.json
+9193dfb304f641b94f0f6e944379881c799afa02 data\emporium\recipes\slop_bucketshapeless.json
+a6b2e138c27ed00306a7d6ef5d288d92f971c2d9 data\emporium\advancements\recipes\misc\slop_bucketshapeless.json
