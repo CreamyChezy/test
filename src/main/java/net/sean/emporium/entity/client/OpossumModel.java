@@ -17,8 +17,8 @@ public class OpossumModel<T extends OpossumEntity> extends SinglePartEntityModel
 	private final ModelPart head;
 
 	public OpossumModel(ModelPart root) {
-		this.opossum = root.getChild("opossum");
-		this.head = opossum.getChild("body");
+		this.opossum = root;
+		this.head = opossum.getChild("head");
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
