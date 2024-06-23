@@ -7,6 +7,8 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.CatEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -35,20 +37,20 @@ public class OpossumEntity extends TameableEntity {
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new SitGoal(this));
-        this.goalSelector.add(2, new AnimalMateGoal(this, 1.15D));
-        this.goalSelector.add(3, new TemptGoal(this, 1.25D, Ingredient.ofItems(ModItems.WORM), false));
-        this.goalSelector.add(4, new FollowOwnerGoal(this, 1.25D, 5, 20, false));
-        this.goalSelector.add(5, new FollowParentGoal(this, 1.25D));
-        this.goalSelector.add(6, new WanderAroundFarGoal(this, 10));
-        this.goalSelector.add(7, new LookAtEntityGoal(this, PlayerEntity.class, 4f));
-        this.goalSelector.add(8, new LookAroundGoal(this));
+        this.goalSelector.add(2, new AnimalMateGoal(this, 1.0));
+        this.goalSelector.add(3, new TemptGoal(this, 1.0, Ingredient.ofItems(ModItems.WORM_STICK), false));
+        this.goalSelector.add(4, new FollowOwnerGoal(this, 1.0, 10.0F, 2.0F, false));
+        this.goalSelector.add(5, new FollowParentGoal(this, 1.0));
+        this.goalSelector.add(6, new WanderAroundFarGoal(this, 1.0));
+        this.goalSelector.add(7, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
+        this.goalSelector.add(7, new LookAroundGoal(this));
     }
 
     public static DefaultAttributeContainer.Builder createOpossumAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 15.0f);
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 15.0);
     }
 
     @Nullable
@@ -85,6 +87,18 @@ public class OpossumEntity extends TameableEntity {
     @Override
     public boolean isTamed() {
         return super.isTamed();
+    }
+
+    @Override
+    public boolean canBreedWith(AnimalEntity other) {
+        if (!this.isTamed()) {
+            return false;
+        } else if (!(other instanceof OpossumEntity)) {
+            return false;
+        } else {
+            OpossumEntity opossumEntity = (OpossumEntity) other;
+            return opossumEntity.isTamed() && super.canBreedWith(other);
+        }
     }
 
     @Override

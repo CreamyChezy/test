@@ -15,7 +15,7 @@ import net.sean.emporium.fluid.ModFluids;
 public class ModItems {
 
     public static final Item WORM = registerItem("worm", new Item(new FabricItemSettings().food(ModFoodComponents.WORM)));
-    public static final Item WORM_STICK = registerItem("worm_stick", new Item(new FabricItemSettings().maxCount(1).maxDamage(100)));
+    public static final Item WORM_STICK = registerItem("worm_stick", new Item(new FabricItemSettings().maxCount(1).maxDamage(75)));
     public static final Item SLOP_BUCKET = registerBucketItem("slop_bucket", new BucketItem(ModFluids.STILL_SLOP, new FabricItemSettings()));
 
     private static void addItemsToFoodTab(FabricItemGroupEntries entries){
