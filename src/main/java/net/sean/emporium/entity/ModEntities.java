@@ -13,5 +13,5 @@ import net.sean.emporium.entity.custom.OpossumEntity;
 public class ModEntities {
     public static final EntityType<OpossumEntity> OPOSSUM = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(AnimalEmporium.MOD_ID, "opossum"), FabricEntityTypeBuilder.create(SpawnGroup.CREATURE,
-                    OpossumEntity::new).dimensions(EntityDimensions.fixed(1f,1f)).build());
+                    OpossumEntity::new).dimensions(EntityDimensions.fixed(0.5f,0.5f)).build());
 }

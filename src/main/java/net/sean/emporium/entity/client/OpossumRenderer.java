@@ -13,7 +13,7 @@ public class OpossumRenderer extends MobEntityRenderer<OpossumEntity, OpossumMod
     private static final Identifier TEXTURE = new Identifier(AnimalEmporium.MOD_ID, "textures/entity/opossum.png");
 
     public OpossumRenderer(EntityRendererFactory.Context context) {
-        super(context, new OpossumModel<>(context.getPart(ModModelLayers.OPOSSUM)), 0.6f);
+        super(context, new OpossumModel<>(context.getPart(ModModelLayers.OPOSSUM)), 0.5f);
     }
 
     @Override
@@ -25,10 +25,10 @@ public class OpossumRenderer extends MobEntityRenderer<OpossumEntity, OpossumMod
     public void render(OpossumEntity mobEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
 
         if(mobEntity.isBaby()) {
-            matrixStack.scale(0.5f,0.5f,0.5f);
+            matrixStack.scale(0.8f,0.8f,0.8f);
         }
         else{
-            matrixStack.scale(1f,1f,1f);
+            matrixStack.scale(1.5f,1.5f,1.5f);
         }
 
 
