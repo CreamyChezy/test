@@ -22,6 +22,6 @@ public class ModPotions {
         HASTE_POTION = register("haste_potion", new Potion(new StatusEffectInstance(StatusEffects.HASTE, 3600)));
     }
     public static void registerPotionsRecipes(){
-        BrewingRecipeRegistry.registerPotionRecipe(Potions.AWKWARD, ModItems.WORM, ModPotions.HASTE_POTION);
+        BrewingRecipeRegistry.registerPotionRecipe(Potions.AWKWARD, ModItems.GOLDEN_WORM, ModPotions.HASTE_POTION);
     }
 }

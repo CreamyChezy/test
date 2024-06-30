@@ -3,7 +3,6 @@ package net.sean.emporium.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.entity.EntityType;
 import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -20,11 +19,14 @@ public class ModItems {
     public static final Item WORM = registerItem("worm", new Item(new FabricItemSettings().food(ModFoodComponents.WORM)));
     public static final Item WORM_STICK = registerItem("worm_stick", new Item(new FabricItemSettings().maxCount(1).maxDamage(75)));
     public static final Item SLOP_BUCKET = registerItem("slop_bucket", new BucketItem(ModFluids.STILL_SLOP, new FabricItemSettings()));
+    public static final Item GOLDEN_WORM = registerItem("golden_worm", new Item(new FabricItemSettings().food(ModFoodComponents.GOLDEN_WORM)));
+
     public static final Item OPOSSUM_SPAWN_EGG = registerItem("opossum_spawn_egg",
             new SpawnEggItem(ModEntities.OPOSSUM, 0x504C4C, 0xEA92AC, new FabricItemSettings()));
 
     private static void addItemsToFoodTab(FabricItemGroupEntries entries){
         entries.add(WORM);
+        entries.add(GOLDEN_WORM);
     }
     private static void addItemsToToolsTab(FabricItemGroupEntries entries){
         entries.add(WORM_STICK);
