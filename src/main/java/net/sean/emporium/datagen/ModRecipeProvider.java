@@ -34,11 +34,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.WORM_STICK) + "shapeless"));
        // GOLDEN WORM SHAPED
        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.GOLDEN_WORM, 1)
-               .pattern("nnn").pattern("nwn").pattern("nnn")
+               .pattern("nnn")
+               .pattern("nwn")
+               .pattern("nnn")
                .input('n', Items.GOLD_NUGGET)
                .input('w', ModItems.WORM)
                .criterion(hasItem(Items.GOLD_NUGGET), conditionsFromItem(Items.GOLD_NUGGET))
                .criterion(hasItem(ModItems.WORM), conditionsFromItem(ModItems.WORM))
                .offerTo(exporter, new Identifier(getRecipeName(ModItems.GOLDEN_WORM) + "shaped"));
+       // WORM SOUP SHAPELESS
+       ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.WORM_SOUP, 1)
+               .input(Items.BOWL)
+               .input(ModItems.WORM)
+               .input(Items.RED_MUSHROOM)
+               .input(Items.BROWN_MUSHROOM)
+               .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
+               .criterion(hasItem(ModItems.WORM), conditionsFromItem(ModItems.WORM))
+               .offerTo(exporter, new Identifier(getRecipeName(ModItems.WORM_SOUP) + "shapeless"));
     }
 }

@@ -30,5 +30,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SLOP_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.OPOSSUM_SPAWN_EGG, new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
         itemModelGenerator.register(ModItems.GOLDEN_WORM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WORM_SOUP, Models.GENERATED);
     }
 }

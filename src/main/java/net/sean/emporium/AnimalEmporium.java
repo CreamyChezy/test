@@ -28,3 +28,7 @@ public class AnimalEmporium implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.OPOSSUM, OpossumEntity.createOpossumAttributes());
 	}
 }
+
+/* change slop to get from clicking on mud instead of crafting
+make opossums spawn in world naturally
+ */
