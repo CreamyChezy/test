@@ -8,6 +8,7 @@ import net.sean.emporium.fluid.ModFluids;
 import net.sean.emporium.item.ModItems;
 import net.sean.emporium.potion.ModPotions;
 import net.sean.emporium.util.ModLootTableModifiers;
+import net.sean.emporium.world.gen.ModWorldGen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +25,7 @@ public class AnimalEmporium implements ModInitializer {
 		ModLootTableModifiers.modifyLootTables();
 		ModPotions.registerPotions();
 		ModPotions.registerPotionsRecipes();
+		ModWorldGen.generateWorldGen();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.OPOSSUM, OpossumEntity.createOpossumAttributes());
 	}
