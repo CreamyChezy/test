@@ -31,7 +31,7 @@ public class AnimalEmporiumClient implements ClientModInitializer {
                 new Identifier("minecraft:block/water_flow"),
                 0x612B20
         ));
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ModFluids.STILL_SLOP, ModFluids.FLOWING_SLOP);
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getSolid(), ModFluids.STILL_SLOP, ModFluids.FLOWING_SLOP);
 
         EntityRendererRegistry.register(ModEntities.OPOSSUM, OpossumRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.OPOSSUM, OpossumModel::getTexturedModelData);
