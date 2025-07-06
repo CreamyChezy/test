@@ -7,6 +7,7 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
 import net.minecraft.util.Identifier;
+import net.sean.emporium.block.ModBlocks;
 import net.sean.emporium.item.ModItems;
 
 import java.util.Optional;
@@ -20,7 +21,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-       //blockStateModelGenerator.registerSimpleCubeAll();
+       blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WORM_BLOCK);
     }
 
     @Override

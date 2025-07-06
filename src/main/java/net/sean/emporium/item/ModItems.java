@@ -19,7 +19,7 @@ public class ModItems {
 
     public static final Item WORM = registerItem("worm", new Item(new FabricItemSettings().food(ModFoodComponents.WORM)));
     public static final Item WORM_STICK = registerItem("worm_stick", new Item(new FabricItemSettings().maxCount(1).maxDamage(75)));
-    public static final Item SLOP_BUCKET = registerItem("slop_bucket", new BucketItem(ModFluids.STILL_SLOP, new FabricItemSettings()));
+    public static final Item SLOP_BUCKET = registerItem("slop_bucket", new BucketItem(ModFluids.STILL_SLOP, new FabricItemSettings().maxCount(1)));
     public static final Item GOLDEN_WORM = registerItem("golden_worm", new Item(new FabricItemSettings().food(ModFoodComponents.GOLDEN_WORM)));
     public static final Item WORM_SOUP = registerItem("worm_soup", new WormSoupItem(new FabricItemSettings().food(ModFoodComponents.WORM_SOUP)));
 

@@ -8,6 +8,7 @@ import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
+import net.sean.emporium.block.ModBlocks;
 import net.sean.emporium.item.ModItems;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
@@ -51,5 +52,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
                .criterion(hasItem(ModItems.WORM), conditionsFromItem(ModItems.WORM))
                .offerTo(exporter, new Identifier(getRecipeName(ModItems.WORM_SOUP) + "shapeless"));
+       // WORM BLOCK
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WORM_BLOCK, 1)
+                .pattern("www")
+                .pattern("www")
+                .pattern("www")
+                .input('w', ModItems.WORM)
+                .criterion(hasItem(ModItems.WORM), conditionsFromItem(ModItems.WORM))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.WORM_BLOCK) + "shaped"));
+       // WORMS FROM WORM BLOCK
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.WORM, 9)
+                .input(ModBlocks.WORM_BLOCK)
+                .criterion(hasItem(ModBlocks.WORM_BLOCK), conditionsFromItem(ModBlocks.WORM_BLOCK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.WORM) + "shapeless"));
     }
 }

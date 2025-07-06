@@ -8,5 +8,6 @@
   "item.emporium.slop_bucket": "Bucket of Slop",
   "item.emporium.opossum_spawn_egg": "Opossum Spawn Egg",
   "item.emporium.golden_worm": "Golden Worm",
-  "item.emporium.worm_soup": "Worm Soup"
+  "item.emporium.worm_soup": "Worm Soup",
+  "block.emporium.worm_block": "Block of Worms"
 }
