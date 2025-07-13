@@ -11,13 +11,14 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.sean.emporium.AnimalEmporium;
+import net.sean.emporium.block.custom.PetBowlBlock;
 //import net.sean.emporium.block.custom.PetBowlBlock;
 
 public class ModBlocks {
 
-    /*public static final Block PET_BOWL = registerBlock("pet_bowl",
+    public static final Block PET_BOWL = registerBlock("pet_bowl",
             new PetBowlBlock(FabricBlockSettings.copy(Blocks.STONE).nonOpaque()));
-    */
+
 
     public static final Block WORM_BLOCK = registerBlock("worm_block",
             new Block(FabricBlockSettings.copy(Blocks.HAY_BLOCK).sounds(BlockSoundGroup.SLIME)));

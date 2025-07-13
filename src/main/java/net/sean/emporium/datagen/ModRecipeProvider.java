@@ -2,6 +2,7 @@ package net.sean.emporium.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -52,7 +53,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
                .criterion(hasItem(ModItems.WORM), conditionsFromItem(ModItems.WORM))
                .offerTo(exporter, new Identifier(getRecipeName(ModItems.WORM_SOUP) + "shapeless"));
-       // WORM BLOCK
+       // WORM BLOCK SHAPED
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WORM_BLOCK, 1)
                 .pattern("www")
                 .pattern("www")
@@ -60,10 +61,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('w', ModItems.WORM)
                 .criterion(hasItem(ModItems.WORM), conditionsFromItem(ModItems.WORM))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.WORM_BLOCK) + "shaped"));
-       // WORMS FROM WORM BLOCK
+       // WORMS FROM WORM BLOCK SHAPELESS
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.WORM, 9)
                 .input(ModBlocks.WORM_BLOCK)
                 .criterion(hasItem(ModBlocks.WORM_BLOCK), conditionsFromItem(ModBlocks.WORM_BLOCK))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.WORM) + "shapeless"));
+       // PET BOWL SHAPED
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.PET_BOWL, 1)
+                .pattern("ibi")
+                .pattern(" i ")
+                .input('i', Items.IRON_INGOT)
+                .input('b', Items.BOWL)
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.BOWL), conditionsFromItem(Items.BOWL))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PET_BOWL) + "shaped"));
+
+
+
     }
 }

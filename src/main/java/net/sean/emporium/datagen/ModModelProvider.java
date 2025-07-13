@@ -2,11 +2,9 @@ package net.sean.emporium.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Model;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
 import net.minecraft.util.Identifier;
+import net.sean.emporium.AnimalEmporium;
 import net.sean.emporium.block.ModBlocks;
 import net.sean.emporium.item.ModItems;
 
@@ -22,7 +20,13 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WORM_BLOCK);
+
+        Identifier bowlID = new Identifier(AnimalEmporium.MOD_ID, "block/pet_bowl");
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.PET_BOWL,
+                BlockStateVariant.create().put(VariantSettings.MODEL,bowlID)));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.PET_BOWL, bowlID);
     }
+
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
