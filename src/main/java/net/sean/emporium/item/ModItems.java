@@ -11,6 +11,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.sean.emporium.AnimalEmporium;
+import net.sean.emporium.block.ModBlocks;
 import net.sean.emporium.entity.ModEntities;
 import net.sean.emporium.fluid.ModFluids;
 import net.sean.emporium.item.custom.WormSoupItem;
@@ -38,6 +39,9 @@ public class ModItems {
     private static void addItemsToSpawnEggsTab(FabricItemGroupEntries entries){
         entries.add(OPOSSUM_SPAWN_EGG);
     }
+    private static void addItemsToBuildingBlocksTab(FabricItemGroupEntries entries){
+        entries.add(ModBlocks.WORM_BLOCK);
+    }
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(AnimalEmporium.MOD_ID, name), item);
     }
@@ -47,6 +51,6 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToFoodTab);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsTab);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(ModItems::addItemsToSpawnEggsTab);
-
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(ModItems::addItemsToBuildingBlocksTab);
     }
 }

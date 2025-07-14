@@ -33,6 +33,4 @@ public class AnimalEmporium implements ModInitializer {
 	}
 }
 
-/* change slop to get from clicking on mud instead of crafting
-make opossums spawn in world naturally
- */
+
