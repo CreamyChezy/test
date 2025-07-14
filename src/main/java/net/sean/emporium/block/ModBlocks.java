@@ -19,7 +19,6 @@ public class ModBlocks {
     public static final Block PET_BOWL = registerBlock("pet_bowl",
             new PetBowlBlock(FabricBlockSettings.copy(Blocks.STONE).nonOpaque()));
 
-
     public static final Block WORM_BLOCK = registerBlock("worm_block",
             new Block(FabricBlockSettings.copy(Blocks.HAY_BLOCK).sounds(BlockSoundGroup.SLIME)));
 

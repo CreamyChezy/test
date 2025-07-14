@@ -3,6 +3,7 @@ package net.sean.emporium;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.sean.emporium.block.ModBlocks;
+import net.sean.emporium.block.entity.ModBlockEntities;
 import net.sean.emporium.entity.ModEntities;
 import net.sean.emporium.entity.custom.OpossumEntity;
 import net.sean.emporium.fluid.ModFluids;
@@ -24,6 +25,7 @@ public class AnimalEmporium implements ModInitializer {
 		ModFluids.registerModFluids();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModBlockEntities.registerModBE();
 		ModLootTableModifiers.modifyLootTables();
 		ModPotions.registerPotions();
 		ModPotions.registerPotionsRecipes();
@@ -31,6 +33,24 @@ public class AnimalEmporium implements ModInitializer {
 
 		FabricDefaultAttributeRegistry.register(ModEntities.OPOSSUM, OpossumEntity.createOpossumAttributes());
 	}
+
+	/*
+	TODO
+	- if opossum is hurt, grab food from bowl otherwise opossum can just randomly eat without actually taking a worm
+	- should bowl have gui or no?
+	- texture(s) for bowl w/ food -- will that need a new BE?
+	- fix and add more animations
+	- somehow fix stupid shadow/hitbox offset
+
+
+
+
+
+	 */
+
+
+
+
 }
 
 

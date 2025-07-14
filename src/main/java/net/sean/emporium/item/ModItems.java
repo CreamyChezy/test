@@ -42,6 +42,9 @@ public class ModItems {
     private static void addItemsToBuildingBlocksTab(FabricItemGroupEntries entries){
         entries.add(ModBlocks.WORM_BLOCK);
     }
+    private static void addItemsToFunctionalTab(FabricItemGroupEntries entries){
+        entries.add(ModBlocks.PET_BOWL);
+    }
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(AnimalEmporium.MOD_ID, name), item);
     }
@@ -52,5 +55,6 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsTab);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(ModItems::addItemsToSpawnEggsTab);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(ModItems::addItemsToBuildingBlocksTab);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(ModItems::addItemsToFunctionalTab);
     }
 }
