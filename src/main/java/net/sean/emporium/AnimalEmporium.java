@@ -41,7 +41,7 @@ public class AnimalEmporium implements ModInitializer {
 	- texture(s) for bowl w/ food -- will that need a new BE?
 	- fix and add more animations
 	- somehow fix stupid shadow/hitbox offset
-
+	- fix bowl inventory model
 
 
 
