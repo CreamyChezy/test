@@ -6,24 +6,16 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
-import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.block.entity.BlockEntityRenderer;
-import net.minecraft.client.render.entity.EntityRenderer;
-import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
 
-import net.sean.emporium.block.entity.ModBlockEntities;
-import net.sean.emporium.client.renderer.CustomBlockEntityRenderer;
 import net.sean.emporium.entity.ModEntities;
 import net.sean.emporium.entity.client.ModModelLayers;
 import net.sean.emporium.entity.client.OpossumModel;
 import net.sean.emporium.entity.client.OpossumRenderer;
 import net.sean.emporium.fluid.ModFluids;
-import net.sean.emporium.item.ModItems;
 
 @Environment(EnvType.CLIENT)
 public class AnimalEmporiumClient implements ClientModInitializer {
@@ -36,8 +28,6 @@ public class AnimalEmporiumClient implements ClientModInitializer {
                 0x612B20
         ));
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getSolid(), ModFluids.STILL_SLOP, ModFluids.FLOWING_SLOP);
-
-        // BlockEntityRendererRegistry.register(ModBlockEntities.PET_BOWL_BE, CustomBlockEntityRenderer::new);
 
         EntityRendererRegistry.register(ModEntities.OPOSSUM, OpossumRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.OPOSSUM, OpossumModel::getTexturedModelData);

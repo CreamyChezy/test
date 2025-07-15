@@ -9,9 +9,12 @@ import net.sean.emporium.AnimalEmporium;
 import net.sean.emporium.block.ModBlocks;
 
 public class ModBlockEntities {
-    public static final BlockEntityType<PetBowlBlockEntity> PET_BOWL_BE =
-            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(AnimalEmporium.MOD_ID, "pet_bowl_be"),
-                    FabricBlockEntityTypeBuilder.create(PetBowlBlockEntity::new, ModBlocks.PET_BOWL).build());
+    public static <T extends BlockEntityType<?>> T register(String path, T blockEntityType) {
+        return Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(AnimalEmporium.MOD_ID, path), blockEntityType);
+    }
+
+    public static final BlockEntityType<PetBowlBlockEntity> PET_BOWL_BE = register("pet_bowl",
+            FabricBlockEntityTypeBuilder.create(PetBowlBlockEntity::new, ModBlocks.PET_BOWL).build());
 
     public static void registerModBE() {
         AnimalEmporium.LOGGER.info("Registering Block Entities for " + AnimalEmporium.MOD_ID);
