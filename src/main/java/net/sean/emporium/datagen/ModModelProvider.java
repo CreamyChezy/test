@@ -21,10 +21,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WORM_BLOCK);
 
-        Identifier bowlID = new Identifier(AnimalEmporium.MOD_ID, "block/pet_bowl");
-        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.PET_BOWL,
-                BlockStateVariant.create().put(VariantSettings.MODEL,bowlID)));
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.PET_BOWL, bowlID);
+       Identifier bowlID = new Identifier(AnimalEmporium.MOD_ID, "block/pet_bowl_empty");
+       blockStateModelGenerator.registerParentedItemModel(ModBlocks.PET_BOWL, bowlID);
     }
 
 

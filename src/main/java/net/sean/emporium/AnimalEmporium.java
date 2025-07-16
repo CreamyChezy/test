@@ -37,15 +37,9 @@ public class AnimalEmporium implements ModInitializer {
 	/*
 	TODO
 	- if opossum is hurt, grab food from bowl otherwise opossum can just randomly eat without actually taking a worm
-	- should bowl have gui or no?
-	- texture(s) for bowl w/ food -- will that need a new BE?
 	- fix and add more animations
 	- somehow fix stupid shadow/hitbox offset
 	- fix bowl inventory model
-
-
-
-
 	 */
 
 

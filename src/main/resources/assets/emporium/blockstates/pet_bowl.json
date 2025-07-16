@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "has_food=false": { "model": "emporium:block/pet_bowl_empty"},
+    "has_food=true": { "model": "emporium:block/pet_bowl_full"}
+  }
+}

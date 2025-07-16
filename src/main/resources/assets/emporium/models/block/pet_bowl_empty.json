@@ -3,8 +3,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "emporium:block/pet_bowl",
-		"particle": "emporium:block/pet_bowl"
+		"0": "emporium:block/pet_bowl_empty",
+		"particle": "emporium:block/pet_bowl_empty"
 	},
 	"elements": [
 		{
